@@ -16,12 +16,15 @@ const User = data.define('User', {
         allowNull: true
     },
     verdade: {
-      type: DataTypes.BOOLEAN,
-      allowNull: true
+        type: DataTypes.BOOLEAN,
+        allowNull: true
     },
     corFavorita: {
-      type: DataTypes.STRING(30)
+        type: DataTypes.STRING(30),
+        allowNull: true
     }
+  }, {
+    timestamps: false,
   })
 
   export default User;

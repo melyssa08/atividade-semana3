@@ -8,14 +8,23 @@ var resultText = document.getElementById('result-body')
 
 botao.addEventListener('click', function () {
 
+  if (verdade.value == "true") {
     var corpo = {
-        name: nome.value,
-        age: idade.value,
-        verdade: verdade1.value,
-        corFavorita: cor
-    }
+      name: nome.value,
+      age: parseInt(idade.value),
+      verdade: true,
+      corFavorita: cor.value
+  }
+  } else {
+    var corpo = {
+      name: nome.value,
+      age: parseInt(idade.value),
+      verdade: false,
+      corFavorita: cor.value
+  }
+  }
 
-    fetch('http://ec2-3-87-245-85.compute-1.amazonaws.com:3000/user', {
+    fetch('http://ec2-54-82-36-2.compute-1.amazonaws.com:3000/user', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -24,7 +33,7 @@ botao.addEventListener('click', function () {
 
         }).then((data) => {
 
-            fetch('http://ec2-3-87-245-85.compute-1.amazonaws.com:3000/user').then((data) => {
+            fetch('http://ec2-54-82-36-2.compute-1.amazonaws.com:3000/user').then((data) => {
             resultText.innerHTML = data.json();
             })
             
