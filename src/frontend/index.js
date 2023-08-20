@@ -37,6 +37,7 @@ document.getElementById("form").addEventListener("submit", function(event) {
           return data.json();
             
         }).then((result) => {
+          console.log(result)
           resultText.innerHTML = result
         })
 });
