@@ -1,8 +1,8 @@
 interface user {
     name: string,
     age: number,
-    verdade: boolean,
-    corFavorita: string
+    corFavorita: string,
+    verdade: boolean
 }
 
 export default user;

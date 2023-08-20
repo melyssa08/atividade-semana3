@@ -15,12 +15,12 @@ const User = data.define('User', {
         type: DataTypes.INTEGER,
         allowNull: true
     },
-    verdade: {
-        type: DataTypes.BOOLEAN,
-        allowNull: true
-    },
     corFavorita: {
         type: DataTypes.STRING(30),
+        allowNull: true
+    },
+    verdade: {
+        type: DataTypes.BOOLEAN,
         allowNull: true
     }
   }, {
