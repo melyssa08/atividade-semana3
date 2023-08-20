@@ -7,7 +7,9 @@ class CrudUser {
     static async create (data: user) {
         const resultBody = await User.create({
             name: data.name,
-            age: data.age
+            age: data.age,
+            corFavorita: data.corFavorita,
+            verdade: data.verdade
         })
 
         return resultBody;
