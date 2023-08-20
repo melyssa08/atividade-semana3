@@ -8,23 +8,24 @@ var resultText = document.getElementById('result-body')
 fetch('http://ec2-34-225-133-106.compute-1.amazonaws.com:3000/user').then((data) => {
   resultText.innerHTML = data.json();
   })
+
+document.getElementById("form").addEventListener("submit", function(event) {
+  event.preventDefault();
+
   
-
-botao.addEventListener('click', function () {
-
-  if (verdade.value == "true") {
+  if (verdade1.value == "true") {
     var corpo = {
       name: nome.value,
       age: parseInt(idade.value),
-      verdade: true,
-      corFavorita: cor.value
+      corFavorita: cor.value,
+      verdade: true
   }
   } else {
     var corpo = {
       name: nome.value,
       age: parseInt(idade.value),
-      verdade: false,
-      corFavorita: cor.value
+      corFavorita: cor.value,
+      verdade: false
   }
   }
 
@@ -42,6 +43,8 @@ botao.addEventListener('click', function () {
             })
             
         })
-})
+});
+
+
 
 
