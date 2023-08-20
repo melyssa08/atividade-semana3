@@ -1,5 +1,3 @@
-const { response } = require("express");
-
 var botao = document.getElementById('button');
 var nome = document.getElementById('input-name');
 var idade = document.getElementById('input-age');
