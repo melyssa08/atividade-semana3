@@ -1,3 +1,5 @@
+const { response } = require("express");
+
 var botao = document.getElementById('button');
 var nome = document.getElementById('input-name');
 var idade = document.getElementById('input-age');
@@ -34,13 +36,10 @@ document.getElementById("form").addEventListener("submit", function(event) {
           body: JSON.stringify(corpo),
 
         }).then((data) => {
-
-          console.log('foi depois')
-            fetch('http://ec2-34-225-133-106.compute-1.amazonaws.com:3000/user').then((data) => {
-            resultText.innerHTML = data.json();
-            console.log(data.json())
-            })
+          return data.json();
             
+        }).then((result) => {
+          resultText.innerHTML = result
         })
 });
 
