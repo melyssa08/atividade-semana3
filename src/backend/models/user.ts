@@ -8,12 +8,19 @@ const User = data.define('User', {
       primaryKey: true
     }, 
     name: {
-        type: DataTypes.STRING(16),
+        type: DataTypes.STRING(30),
         allowNull: true
     },
     age: {
-        type: DataTypes.STRING(16),
+        type: DataTypes.INTEGER,
         allowNull: true
+    },
+    verdade: {
+      type: DataTypes.BOOLEAN,
+      allowNull: true
+    },
+    corFavorita: {
+      type: DataTypes.STRING(30)
     }
   })
 

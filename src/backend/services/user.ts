@@ -23,25 +23,6 @@ class CrudUser {
         return resultBody;
     }
 
-    static async update (data: user, id: number) {
-        const resultBody = await User.update({
-            name:data.name,
-            age: data.age
-        }, {
-            where: {id: id}
-        })
-        return resultBody;
-    }
-
-    static async delete (id: number) {
-        const resultBody = await User.destroy({
-            where: {
-                id_user: id
-            }
-          })
-
-          return resultBody;
-        }
 }
 
 export default CrudUser;

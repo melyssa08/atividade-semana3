@@ -20,17 +20,6 @@ class ControllerUser {
         res.status(200).json(bodyResponse)
     }
 
-    static async update (req: Request, res: Response) {
-        const bodyResponse = await CrudUser.update(req.body, 
-            Number(req.params.id));
-
-        res.status(200).json(bodyResponse);
-    }
-
-    static async delete (req: Request, res: Response) {
-        const bodyResponse = await CrudUser.delete(Number(req.params.id))
-        res.status(200).json(bodyResponse);
-    }
 }
 
 export default ControllerUser;

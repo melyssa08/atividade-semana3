@@ -1,0 +1,23 @@
+# Comentários começam com um sinal de cerquilha (#)
+
+# Ignorar arquivos de compilação e diretórios
+bin/
+build/
+*.o
+*.a
+
+# Ignorar arquivos de configuração local
+.env
+config.ini
+
+# Ignorar diretórios e arquivos específicos
+logs/
+tmp/
+config/database.yml
+
+# Ignorar arquivos temporários e de backup
+*.swp
+*~
+
+# Ignorar a pasta node_modules
+node_modules/
