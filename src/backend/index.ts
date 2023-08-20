@@ -5,6 +5,7 @@ import cors from 'cors';
 import User from "./models/user";
 import route from "./routes/user";
 import { data, Connection } from "./config/connection";
+import { createTables } from "./models";
 
 
 dotenv.config();
@@ -28,3 +29,4 @@ const server: any = app.listen(3000, function () {
     let port = server.address().port
 })
 
+createTables();
