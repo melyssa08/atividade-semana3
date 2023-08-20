@@ -5,6 +5,10 @@ var verdade1 = document.getElementById('input-verdade')
 var cor = document.getElementById('input-cor')
 var resultText = document.getElementById('result-body')
 
+fetch('http://ec2-34-225-133-106.compute-1.amazonaws.com:3000/user').then((data) => {
+  resultText.innerHTML = data.json();
+  })
+  
 
 botao.addEventListener('click', function () {
 
