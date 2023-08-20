@@ -29,8 +29,4 @@ const server: any = app.listen(3000, function () {
     let port = server.address().port
 })
 
-User.sync({ force: true }).then(() => {
-    console.log('Tabela de usuário destruída e recriada com sucesso.');
-  });
-
 createTables();
