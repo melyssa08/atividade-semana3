@@ -38,7 +38,7 @@ document.getElementById("form").addEventListener("submit", function(event) {
             return result.json()
           }).then((resultOficial) => {
             console.log(resultOficial)
-            resultText.innerHTML = resultOficial
+            resultText.innerHTML = resultOficial[0]
           })
             
         })
