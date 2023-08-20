@@ -37,7 +37,7 @@ document.getElementById("form").addEventListener("submit", function(event) {
 
           console.log('foi depois')
             fetch('http://ec2-34-225-133-106.compute-1.amazonaws.com:3000/user').then((data) => {
-            resultText.innerHTML = data.json();
+            resultText.innerHTML = data.json()[0];
             })
             
         })
