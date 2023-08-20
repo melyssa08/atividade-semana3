@@ -24,7 +24,7 @@ botao.addEventListener('click', function () {
   }
   }
 
-    fetch('http://ec2-54-82-36-2.compute-1.amazonaws.com:3000/user', {
+    fetch('http://ec2-34-225-133-106.compute-1.amazonaws.com:3000/user', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -33,7 +33,7 @@ botao.addEventListener('click', function () {
 
         }).then((data) => {
 
-            fetch('http://ec2-54-82-36-2.compute-1.amazonaws.com:3000/user').then((data) => {
+            fetch('http://ec2-34-225-133-106.compute-1.amazonaws.com:3000/user').then((data) => {
             resultText.innerHTML = data.json();
             })
             
