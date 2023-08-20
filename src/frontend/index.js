@@ -34,11 +34,13 @@ document.getElementById("form").addEventListener("submit", function(event) {
           body: JSON.stringify(corpo),
 
         }).then((data) => {
-          return data.json();
+          fetch('http://ec2-34-225-133-106.compute-1.amazonaws.com:3000/user').then((result) => {
+            return result.json()
+          }).then((resultOficial) => {
+            console.log(resultOficial)
+            resultText.innerHTML = resultOficial
+          })
             
-        }).then((result) => {
-          console.log(result)
-          resultText.innerHTML = result
         })
 });
 
